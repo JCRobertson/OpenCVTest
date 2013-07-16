@@ -1,23 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6T-y9-gBU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="870" id="r5h-Pd-Ndh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3K4-bC-Tb1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="387" id="cED-Br-tab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="On">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStart:" destination="2" eventType="touchUpInside" id="Woc-nu-x4f"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eZX-hT-UiQ">
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Parabolic"/>
+                                    <segment title="Corners"/>
+                                    <segment title="Inverted"/>
+                                    <segment title="Lines"/>
+                                    <segment title="Rectangles"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S9j-Xo-Gvf">
+                                <segments>
+                                    <segment title="Back"/>
+                                    <segment title="Front"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changePerspective:" destination="2" eventType="valueChanged" id="DgC-lR-cYH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h6T-y9-gBU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rc8-xx-bl0"/>
+                            <constraint firstItem="eZX-hT-UiQ" firstAttribute="top" secondItem="3K4-bC-Tb1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Vbx-3c-nKM"/>
+                            <constraint firstItem="3K4-bC-Tb1" firstAttribute="top" secondItem="h6T-y9-gBU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dMd-0c-Ept"/>
+                            <constraint firstItem="3K4-bC-Tb1" firstAttribute="centerX" secondItem="h6T-y9-gBU" secondAttribute="centerX" type="default" id="gTm-IY-TnL"/>
+                            <constraint firstItem="S9j-Xo-Gvf" firstAttribute="top" secondItem="h6T-y9-gBU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qAs-yW-WQD"/>
+                            <constraint firstItem="h6T-y9-gBU" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="sDu-I4-VYa"/>
+                            <constraint firstItem="h6T-y9-gBU" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sxV-za-Ojt"/>
+                            <constraint firstItem="3K4-bC-Tb1" firstAttribute="centerX" secondItem="eZX-hT-UiQ" secondAttribute="centerX" type="default" id="ts8-WT-unq"/>
+                            <constraint firstItem="S9j-Xo-Gvf" firstAttribute="trailing" secondItem="eZX-hT-UiQ" secondAttribute="trailing" type="default" id="wql-sk-1yh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="3K4-bC-Tb1" id="k1o-Vw-chg"/>
+                        <outlet property="imageView" destination="h6T-y9-gBU" id="sPd-sH-iqL"/>
+                        <outlet property="perpective" destination="S9j-Xo-Gvf" id="U6b-D6-3OS"/>
+                        <outlet property="typeOfDraw" destination="eZX-hT-UiQ" id="bmS-cw-Rlx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionStart:"/>
+                <relationship kind="action" name="changePerspective:"/>
+                <relationship kind="outlet" name="button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="perpective" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="typeOfDraw" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

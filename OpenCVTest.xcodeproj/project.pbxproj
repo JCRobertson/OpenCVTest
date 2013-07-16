@@ -18,7 +18,15 @@
 		392D5F82176A38CF007D298B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 392D5F81176A38CF007D298B /* Default-568h@2x.png */; };
 		392D5F85176A38CF007D298B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392D5F83176A38CF007D298B /* MainStoryboard_iPhone.storyboard */; };
 		392D5F88176A38CF007D298B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392D5F86176A38CF007D298B /* MainStoryboard_iPad.storyboard */; };
-		392D5F8B176A38CF007D298B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 392D5F8A176A38CF007D298B /* ViewController.m */; };
+		392D5F92176A3905007D298B /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F91176A3905007D298B /* opencv2.framework */; };
+		392D5F94176A3B80007D298B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F93176A3B80007D298B /* Accelerate.framework */; };
+		392D5F96176A3B90007D298B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F95176A3B90007D298B /* AssetsLibrary.framework */; };
+		392D5F98176A3B96007D298B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F97176A3B96007D298B /* AVFoundation.framework */; };
+		392D5F9A176A3BAA007D298B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F99176A3BAA007D298B /* CoreImage.framework */; };
+		392D5F9C176A3BB6007D298B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F9B176A3BB6007D298B /* CoreMedia.framework */; };
+		392D5F9E176A3BC3007D298B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F9D176A3BC3007D298B /* CoreVideo.framework */; };
+		392D5FA0176A3BCC007D298B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392D5F9F176A3BCC007D298B /* QuartzCore.framework */; };
+		392D5FA2176A3D41007D298B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 392D5FA1176A3D41007D298B /* ViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +46,15 @@
 		392D5F84176A38CF007D298B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		392D5F87176A38CF007D298B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		392D5F89176A38CF007D298B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		392D5F8A176A38CF007D298B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		392D5F91176A3905007D298B /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
+		392D5F93176A3B80007D298B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		392D5F95176A3B90007D298B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		392D5F97176A3B96007D298B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		392D5F99176A3BAA007D298B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		392D5F9B176A3BB6007D298B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		392D5F9D176A3BC3007D298B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		392D5F9F176A3BCC007D298B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		392D5FA1176A3D41007D298B /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +62,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				392D5F6C176A38CF007D298B /* UIKit.framework in Frameworks */,
 				392D5F6E176A38CF007D298B /* Foundation.framework in Frameworks */,
+				392D5F6C176A38CF007D298B /* UIKit.framework in Frameworks */,
+				392D5FA0176A3BCC007D298B /* QuartzCore.framework in Frameworks */,
+				392D5F9E176A3BC3007D298B /* CoreVideo.framework in Frameworks */,
+				392D5F9C176A3BB6007D298B /* CoreMedia.framework in Frameworks */,
+				392D5F9A176A3BAA007D298B /* CoreImage.framework in Frameworks */,
 				392D5F70176A38CF007D298B /* CoreGraphics.framework in Frameworks */,
+				392D5F98176A3B96007D298B /* AVFoundation.framework in Frameworks */,
+				392D5F96176A3B90007D298B /* AssetsLibrary.framework in Frameworks */,
+				392D5F92176A3905007D298B /* opencv2.framework in Frameworks */,
+				392D5F94176A3B80007D298B /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +99,14 @@
 		392D5F6A176A38CF007D298B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				392D5F9F176A3BCC007D298B /* QuartzCore.framework */,
+				392D5F9D176A3BC3007D298B /* CoreVideo.framework */,
+				392D5F9B176A3BB6007D298B /* CoreMedia.framework */,
+				392D5F99176A3BAA007D298B /* CoreImage.framework */,
+				392D5F97176A3B96007D298B /* AVFoundation.framework */,
+				392D5F95176A3B90007D298B /* AssetsLibrary.framework */,
+				392D5F93176A3B80007D298B /* Accelerate.framework */,
+				392D5F91176A3905007D298B /* opencv2.framework */,
 				392D5F6B176A38CF007D298B /* UIKit.framework */,
 				392D5F6D176A38CF007D298B /* Foundation.framework */,
 				392D5F6F176A38CF007D298B /* CoreGraphics.framework */,
@@ -90,7 +122,7 @@
 				392D5F83176A38CF007D298B /* MainStoryboard_iPhone.storyboard */,
 				392D5F86176A38CF007D298B /* MainStoryboard_iPad.storyboard */,
 				392D5F89176A38CF007D298B /* ViewController.h */,
-				392D5F8A176A38CF007D298B /* ViewController.m */,
+				392D5FA1176A3D41007D298B /* ViewController.mm */,
 				392D5F72176A38CF007D298B /* Supporting Files */,
 			);
 			path = OpenCVTest;
@@ -179,7 +211,7 @@
 			files = (
 				392D5F78176A38CF007D298B /* main.m in Sources */,
 				392D5F7C176A38CF007D298B /* AppDelegate.m in Sources */,
-				392D5F8B176A38CF007D298B /* ViewController.m in Sources */,
+				392D5FA2176A3D41007D298B /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +306,10 @@
 		392D5F8F176A38CF007D298B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCVTest/OpenCVTest-Prefix.pch";
 				INFOPLIST_FILE = "OpenCVTest/OpenCVTest-Info.plist";
@@ -285,6 +321,10 @@
 		392D5F90176A38CF007D298B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenCVTest/OpenCVTest-Prefix.pch";
 				INFOPLIST_FILE = "OpenCVTest/OpenCVTest-Info.plist";
